@@ -1,9 +1,9 @@
 # desafio-walmart-spring-boot
 
-Creación contenedor:
+Creación imagen:
 
 docker build -t "spring-boot-docker" .
 
-Ejecución contenedor:
+Creación y ejecución contenedor:
 
-docker run  --name spring-boot-docker -p 8080:8080 spring-boot-docker:latest 
+docker run -d --name spring-boot-docker -p 8080:9000 --link mongodb-local:mongo spring-boot-docker:latest
